@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/chat_click"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="40dp">
+
+                    <ImageView
+                        android:id="@+id/chat_person_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/albert" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/chat_person_name"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/card_image"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/card_image"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="24dp"
+                    tools:text="nome placeholder" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:context=".ChatActivity"
+            tools:listitem="@layout/messages_layout">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_view_messages"
+            android:layout_marginTop="-60dp"
+            android:layout_marginHorizontal="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/scrivi_messagio_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="40dp"
+                >
+
+                <EditText
+                    android:id="@+id/scrivi_messaggio_edit"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Message" />
+
+                <ImageView
+                    android:id="@+id/messaggio_vocale"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="335dp"
+                    android:src="@drawable/mic_icon"/>
+
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+    </RelativeLayout>
+</FrameLayout>

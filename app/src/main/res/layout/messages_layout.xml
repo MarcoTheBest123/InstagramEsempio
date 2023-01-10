@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/nonso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/message_part"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        >
+    <TextView
+        android:id="@+id/messaggio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ciao"
+        android:textSize="24dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/orario_messaggio"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:hint="data"
+            android:layout_marginLeft="250dp"
+            android:layout_below="@+id/message_part"/>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
